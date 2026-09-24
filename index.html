@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Shaw Consultores: estrategia de personas, estructura organizacional, talento y People Analytics para PYMEs y empresas familiares en Ecuador." />
+  <title>Shaw Consultores | Personas. Estructura. Crecimiento.</title>
+  <style>
+    :root{--yellow:#f4c430;--ink:#151515;--muted:#666;--paper:#fffdf7;--line:#e9e3d6;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,253,247,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:900;letter-spacing:.04em}.brand span{display:inline-grid;place-items:center;width:38px;height:38px;background:var(--yellow);margin-right:10px}
+    .links{display:flex;gap:24px;font-size:14px;font-weight:650}.cta{display:inline-block;background:var(--ink);color:white;padding:13px 18px;border-radius:999px;font-weight:750}
+    .hero{padding:110px 0 90px}.eyebrow{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.hero h1{font-size:clamp(52px,8vw,96px);line-height:.92;letter-spacing:-.055em;margin:18px 0 28px;max-width:1000px}
+    .hero h1 em{font-style:normal;background:linear-gradient(transparent 60%,var(--yellow) 60%)}.lead{font-size:clamp(19px,2.2vw,25px);max-width:760px;color:#383838}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}.ghost{padding:12px 18px;border:1px solid var(--ink);border-radius:999px;font-weight:750}
+    section{padding:86px 0}.dark{background:var(--ink);color:white}.section-head{display:grid;grid-template-columns:1fr 2fr;gap:50px;margin-bottom:46px}.section-head h2{font-size:clamp(38px,5vw,62px);line-height:1;letter-spacing:-.04em;margin:0}.section-head p{font-size:19px;color:var(--muted);margin:0}.dark .section-head p{color:#bbb}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{padding:30px;border:1px solid var(--line);background:var(--white);border-radius:20px}.card .num{font-size:13px;font-weight:800;color:#777}.card h3{font-size:25px;margin:35px 0 8px}.card p{color:var(--muted);margin:0}
+    .method{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#444;border:1px solid #444}.step{background:var(--ink);padding:34px 26px;min-height:270px}.letter{font-size:70px;font-weight:900;color:var(--yellow);line-height:1}.step h3{margin:26px 0 8px}.step p{color:#bbb;margin:0}
+    .score{background:var(--yellow)}.score .section-head p{color:#403600}.pill{display:inline-block;border:1px solid var(--ink);border-radius:999px;padding:8px 13px;margin:6px 6px 0 0;font-size:14px;font-weight:700}
+    .about{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}.about h2{font-size:clamp(42px,5vw,68px);line-height:1;letter-spacing:-.04em;margin:0}.about p{font-size:18px;color:var(--muted)}.quote{font-size:28px!important;color:var(--ink)!important;font-weight:750;line-height:1.25}
+    .contact{padding:100px 0}.contactbox{background:var(--ink);color:white;border-radius:28px;padding:clamp(32px,7vw,76px)}.contactbox h2{font-size:clamp(44px,7vw,80px);line-height:.95;letter-spacing:-.05em;margin:0 0 24px}.contactbox p{color:#c7c7c7;max-width:650px;font-size:19px}.contactbox .cta{background:var(--yellow);color:var(--ink);margin-top:18px}
+
+
+    .pillars{background:var(--paper)}.pillars-intro{max-width:780px;margin-bottom:44px}.pillars-intro h2{font-size:clamp(42px,5vw,68px);line-height:1;letter-spacing:-.04em;margin:16px 0}.pillars-intro p{font-size:19px;color:var(--muted)}
+    .pillars-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.pillar{background:white;border:1px solid var(--line);border-radius:22px;padding:30px;position:relative;overflow:hidden}.pillar:before{content:"";position:absolute;left:0;top:0;width:7px;height:100%;background:var(--yellow)}
+    .pillar h3{font-size:28px;line-height:1.1;margin:28px 0 18px}.pillar ul{margin:0;padding-left:19px;color:var(--muted)}.pillar li{margin:7px 0}.pillar-note{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-weight:700;color:var(--ink)}
+
+    .story{background:#fff}.story-intro{display:grid;grid-template-columns:.8fr 1.7fr;gap:60px;align-items:start}
+    .story-copy p{font-size:18px;color:var(--muted);margin-top:0;margin-bottom:18px}.story-copy .opening{font-size:27px;color:var(--ink);font-weight:800;line-height:1.3}
+    .identity{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}.identity-card{border-top:4px solid var(--yellow);padding:26px 4px 0}.identity-card h3{font-size:25px;margin:0 0 12px}.identity-card p{color:var(--muted);margin:0}
+    .values{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}.value{background:var(--ink);color:white;border-radius:18px;padding:28px 22px;min-height:145px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:21px;font-weight:800}
+
+    footer{padding:32px 0;border-top:1px solid var(--line);font-size:14px;color:#666}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:780px){.links{display:none}.hero{padding-top:76px}.section-head,.about,.story-intro{grid-template-columns:1fr}.grid,.pillars-grid{grid-template-columns:1fr}.method{grid-template-columns:1fr 1fr}.identity{grid-template-columns:1fr}.values{grid-template-columns:1fr 1fr}.step{min-height:220px}}
+    @media(max-width:500px){.method,.values{grid-template-columns:1fr}.wrap{width:min(100% - 28px,1120px)}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><nav><a class="brand" href="#"><span>S|C</span> SHAW CONSULTORES</a><div class="links">
+<a href="#historia">Nuestra Historia</a>
+<a href="#metodo">Método SHAW</a>
+<a href="#pilares">Pilares Fundamentales</a>
+<a href="#score">Organizational Score</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#contacto">Contacto</a>
+</div><a class="cta" href="#contacto">Conversemos</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap"><div class="eyebrow">Consultoría estratégica de Recursos Humanos · Ecuador</div><h1>Personas.<br>Estructura.<br><em>Crecimiento.</em></h1><p class="lead">Ayudamos a PYMEs y empresas familiares a convertir Recursos Humanos en una función estratégica, con decisiones de personas basadas en estructura, datos y objetivos de negocio.</p><div class="actions"><a class="cta" href="#contacto">Conversemos sobre tu empresa</a><a class="ghost" href="#metodo">Conoce nuestro método</a></div></div></section>
+<section class="story" id="historia">
+  <div class="wrap">
+    <div class="story-intro">
+      <div>
+        <div class="eyebrow">Nuestra Historia</div>
+        <h2 style="font-size:clamp(42px,5vw,68px);line-height:1;letter-spacing:-.04em;margin:18px 0 0">Construimos organizaciones preparadas para crecer.</h2>
+      </div>
+      <div class="story-copy">
+        <p class="opening">Shaw Consultores nace con la convicción de que las personas son el motor que impulsa el crecimiento de cualquier organización.</p>
+        <p>Creemos que cuando las empresas desarrollan una estrategia clara para gestionar su talento, fortalecen su capacidad para crecer, adaptarse y generar resultados sostenibles.</p>
+        <p>Nuestro propósito es acompañar a las organizaciones en la construcción de equipos sólidos, estructuras organizacionales eficientes y procesos que permitan alinear el talento con los objetivos del negocio.</p>
+        <p>Desde nuestros inicios entendimos que el futuro de las empresas depende de la integración entre las personas, los procesos y la tecnología. Por ello, Shaw Consultores reúne diferentes áreas de especialización con el objetivo de ofrecer soluciones integrales que generen valor para las organizaciones y contribuyan a su evolución.</p>
+        <p>Más que ofrecer servicios de consultoría, buscamos convertirnos en un aliado estratégico para las empresas, acompañándolas en cada etapa de su crecimiento mediante soluciones prácticas, innovadoras y basadas en datos.</p>
+      </div>
+    </div>
+
+    <div class="identity">
+      <article class="identity-card">
+        <div class="eyebrow">Propósito</div>
+        <h3>Crecer de forma sostenible.</h3>
+        <p>Impulsar el crecimiento sostenible de las organizaciones mediante una gestión estratégica de las personas, los procesos y la información, generando empresas más eficientes, competitivas y preparadas para el futuro.</p>
+      </article>
+      <article class="identity-card">
+        <div class="eyebrow">Misión</div>
+        <h3>Estrategia que se convierte en acción.</h3>
+        <p>Acompañamos a las organizaciones en el diseño de estrategias de talento, estructuras organizacionales y procesos que les permitan tomar mejores decisiones, optimizar sus recursos y fortalecer su crecimiento, integrando consultoría, análisis de datos e innovación para generar resultados sostenibles.</p>
+      </article>
+      <article class="identity-card">
+        <div class="eyebrow">Visión</div>
+        <h3>Una referencia para Latinoamérica.</h3>
+        <p>Ser la firma de consultoría referente en Latinoamérica en estrategia de personas y transformación organizacional, reconocida por ayudar a las empresas a convertir el talento en una ventaja competitiva y por impulsar organizaciones más eficientes, innovadoras y sostenibles.</p>
+      </article>
+    </div>
+
+    <div style="margin-top:70px">
+      <div class="eyebrow">Nuestros Valores</div>
+      <div class="values">
+        <div class="value">Integridad</div>
+        <div class="value">Excelencia</div>
+        <div class="value">Trabajo en equipo</div>
+        <div class="value">Innovación</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="dark" id="metodo"><div class="wrap"><div class="section-head"><div class="eyebrow">Método SHAW</div><div><h2>Entender. Analizar. Transformar.</h2><p>Una metodología propia para pasar del diagnóstico a un plan de acción concreto, priorizado y medible.</p></div></div><div class="method">
+<div class="step"><div class="letter">S</div><h3>Situation</h3><p>Entendemos el negocio, su contexto, objetivos y retos actuales.</p></div>
+<div class="step"><div class="letter">H</div><h3>Human Capital</h3><p>Analizamos estructura, roles, capacidades, costes y dinámicas de personas.</p></div>
+<div class="step"><div class="letter">A</div><h3>Analysis</h3><p>Identificamos hallazgos, causas raíz, riesgos y oportunidades prioritarias.</p></div>
+<div class="step"><div class="letter">W</div><h3>Way Forward</h3><p>Convertimos el análisis en acciones, KPIs y seguimiento para avanzar.</p></div>
+</div></div></section>
+<section class="pillars" id="pilares">
+  <div class="wrap">
+    <div class="pillars-intro">
+      <div class="eyebrow">Pilares Fundamentales</div>
+      <h2>Una visión integral de la organización.</h2>
+      <p>Nuestras soluciones conectan estrategia, talento, datos, procesos y desarrollo para ayudar a las organizaciones a tomar mejores decisiones y construir capacidades sostenibles.</p>
+    </div>
+    <div class="pillars-grid">
+      <article class="pillar">
+        <h3>Estrategia de Personas</h3>
+        <ul><li>Diagnóstico organizacional</li><li>Diseño organizacional</li><li>Workforce Planning</li><li>Estructura organizacional</li><li>Manuales de funciones</li><li>Perfiles de cargo</li></ul>
+      </article>
+      <article class="pillar">
+        <h3>Atracción Estratégica de Talento</h3>
+        <ul><li>Reclutamiento</li><li>Selección</li><li>Assessment</li><li>Employer Branding</li><li>Onboarding</li></ul>
+        <div class="pillar-note">Más que cubrir vacantes: conectar talento con estrategia.</div>
+      </article>
+      <article class="pillar">
+        <h3>People Analytics</h3>
+        <ul><li>Dashboards</li><li>Indicadores</li><li>Rotación</li><li>Ausentismo</li><li>Headcount</li><li>Productividad</li><li>Power BI</li><li>Reportes ejecutivos</li></ul>
+        <div class="pillar-note">Convertimos datos de personas en decisiones de negocio.</div>
+      </article>
+      <article class="pillar">
+        <h3>Optimización Organizacional</h3>
+        <ul><li>Rediseño de procesos</li><li>Automatización</li><li>Mejora continua</li><li>Eficiencia operacional</li></ul>
+      </article>
+      <article class="pillar">
+        <h3>Desarrollo Organizacional</h3>
+        <ul><li>Evaluación de desempeño</li><li>Planes de carrera</li><li>Planes de sucesión</li><li>Cultura organizacional</li><li>Gestión del cambio</li></ul>
+      </article>
+      <article class="pillar">
+        <h3>Formación y Desarrollo</h3>
+        <ul><li>Programas de liderazgo</li><li>Formación para mandos medios</li><li>Desarrollo de competencias</li><li>Coaching para líderes</li></ul>
+        <div class="pillar-note">No ofrecemos cursos aislados. Diseñamos soluciones de desarrollo conectadas con las necesidades reales de la organización.</div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="score" id="score">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">SHAW Organizational Score</div>
+      <div>
+        <h2>Una radiografía clara de tu organización.</h2>
+        <p>Antes de recomendar cambios, analizamos cómo está funcionando realmente la empresa. El SHAW Organizational Score permite identificar fortalezas, brechas, riesgos y prioridades para orientar decisiones organizacionales con mayor claridad.</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Estructura organizacional</h3>
+        <p>Analizamos el diseño de la organización, niveles jerárquicos, distribución de responsabilidades, claridad de roles y posibles duplicidades o vacíos dentro de la estructura.</p>
+      </div>
+      <div class="card">
+        <h3>Talento & capacidades</h3>
+        <p>Evaluamos si la organización cuenta con las capacidades, perfiles y talento necesarios para responder a las necesidades actuales y futuras del negocio.</p>
+      </div>
+      <div class="card">
+        <h3>Procesos & eficiencia</h3>
+        <p>Revisamos los procesos clave para detectar oportunidades de simplificación, automatización, mejora continua y uso más eficiente de los recursos.</p>
+      </div>
+      <div class="card">
+        <h3>Datos & decisiones</h3>
+        <p>Analizamos la información disponible, los indicadores de personas y la calidad de los datos utilizados para apoyar decisiones estratégicas y operativas.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;max-width:780px">
+      <h3 style="font-size:28px;margin-bottom:8px">Del diagnóstico al Way Forward</h3>
+      <p style="font-size:18px;margin-top:0">Los resultados se convierten en una hoja de ruta con prioridades, acciones e indicadores de seguimiento. El objetivo no es cambiar por cambiar, sino entender dónde actuar, por qué hacerlo y qué impacto puede generar para la organización.</p>
+    </div>
+  </div>
+</section>
+<section id="nosotros"><div class="wrap about"><div><div class="eyebrow">Sobre Shaw Consultores</div><h2>La estrategia también empieza por las personas.</h2></div><div><p class="quote">Acompañamos a empresas que quieren profesionalizar su gestión de personas sin perder de vista lo que hace único a su negocio.</p><p>Shaw Consultores nace con foco en PYMEs y empresas familiares de Ecuador. Integramos experiencia en reclutamiento, administración de personas, mejora de procesos y planificación de talento para construir soluciones claras, realistas y sostenibles.</p><p><strong>Samantha Shaw</strong><br>HR Consultant · 8+ años de experiencia en Recursos Humanos.</p></div></div></section>
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div class="contactbox">
+      <div class="eyebrow">Contacto</div>
+      <h2>Conversemos sobre tu organización.</h2>
+      <p>Si quieres conocer cómo Shaw Consultores puede acompañar a tu empresa, conversemos sobre tus retos, prioridades y oportunidades de crecimiento.</p>
+      <div style="margin-top:30px;font-size:18px;line-height:1.9">
+        <strong style="font-size:22px">Samantha Shaw</strong><br>
+        HR Consultant · Shaw Consultores<br>
+        Ecuador · Latinoamérica<br>
+        <a href="mailto:Samantha.shaw@shawconsultores.com" style="color:var(--yellow);font-weight:800">Samantha.shaw@shawconsultores.com</a>
+      </div>
+      <a class="cta" href="mailto:Samantha.shaw@shawconsultores.com?subject=Consulta%20-%20Shaw%20Consultores">Enviar un correo</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+<footer><div class="wrap foot"><strong>SHAW CONSULTORES</strong><span>© 2026 · Ecuador · shawconsultores.com</span></div></footer>
+</body>
+</html>
